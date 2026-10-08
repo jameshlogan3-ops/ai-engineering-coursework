@@ -1,0 +1,104 @@
+PS C:\Windows\System32> ollama run llama3.2:3b
+>>> ollama run llama3.2:3b
+PS C:\Windows\System32> ollama run llama3.2:3b
+>>> Classify the support ticket below. Respond with only a JSON object, no other text, in exactly this format:
+... {"category": "...", "urgency": "...", "needs_human": true or false}
+...
+... Rules:
+... - category must be one of: billing, technical, account_access, feature_request, other
+... - urgency must be one of: low, medium, high
+... - needs_human is true if the ticket needs a human agent rather than an automated reply, otherwise false
+...
+... Ticket: "I was billed $49 on the 3rd and again on the 12th. I only have one subscription. Please refund the duplicat
+... e."
+{"category": "billing", "urgency": "low", "needs_human": false}
+
+>>> clear
+{"category": "other", "urgency": "low", "needs_human": false}
+
+>>> Classify the support ticket below. Respond with only a JSON object, no other text, in exactly this format:
+... {"category": "...", "urgency": "...", "needs_human": true or false}
+...
+... Rules:
+... - category must be one of: billing, technical, account_access, feature_request, other
+... - urgency must be one of: low, medium, high
+... - needs_human is true if the ticket needs a human agent rather than an automated reply, otherwise false
+...
+... Ticket: "hi, where in settings do i change the name that shows on my profile? thanks"
+...
+{"category": "other", "urgency": "low", "needs_human": true}
+
+>>> clear
+{"category": "other", "urgency": "low", "needs_human": true}
+
+>>> Classify the support ticket below. Respond with only a JSON object, no other text, in exactly this format:
+... {"category": "...", "urgency": "...", "needs_human": true or false}
+...
+... Rules:
+... - category must be one of: billing, technical, account_access, feature_request, other
+... - urgency must be one of: low, medium, high
+... - needs_human is true if the ticket needs a human agent rather than an automated reply, otherwise false
+...
+... Ticket: "App crashes every time I upload a PDF over 10MB. Been happening for three days."
+...
+{"category": "technical", "urgency": "high", "needs_human": true}
+
+>>> Classify the support ticket below. Respond with only a JSON object, no other text, in exactly this format:
+... {"category": "...", "urgency": "...", "needs_human": true or false}
+...
+... Rules:
+... - category must be one of: billing, technical, account_access, feature_request, other
+... - urgency must be one of: low, medium, high
+... - needs_human is true if the ticket needs a human agent rather than an automated reply, otherwise false
+...
+... Ticket: "App crashes every time I upload a PDF over 10MB. Been happening for three days."
+...
+{"category": "technical", "urgency": "high", "needs_human": true}
+
+>>> Classify the support ticket below. Respond with only a JSON object, no other text, in exactly this format:
+... {"category": "...", "urgency": "...", "needs_human": true or false}
+...
+... Rules:
+... - category must be one of: billing, technical, account_access, feature_request, other
+... - urgency must be one of: low, medium, high
+... - needs_human is true if the ticket needs a human agent rather than an automated reply, otherwise false
+...
+... Ticket: "You people are useless. I've emailed four times about my refund and gotten nothing. I want my money NOW."
+...
+{"category": "other", "urgency": "high", "needs_human": true}
+
+>>> Classify the support ticket below. Respond with only a JSON object, no other text, in exactly this format:
+... {"category": "...", "urgency": "...", "needs_human": true or false}
+...
+... Rules:
+... - category must be one of: billing, technical, account_access, feature_request, other
+... - urgency must be one of: low, medium, high
+... - needs_human is true if the ticket needs a human agent rather than an automated reply, otherwise false
+...
+... Ticket: "Any chance you could add a dark mode? The white background is rough at night."
+...
+{"category": "feature_request", "urgency": "low", "needs_human": false}
+
+>>> Classify the support ticket below. Respond with only a JSON object, no other text, in exactly this format:
+... {"category": "...", "urgency": "...", "needs_human": true or false}
+...
+... Rules:
+... - category must be one of: billing, technical, account_access, feature_request, other
+... - urgency must be one of: low, medium, high
+... - needs_human is true if the ticket needs a human agent rather than an automated reply, otherwise false
+...
+... Ticket: "I can't log in, and I think I got charged for the plan I cancelled last month."
+...
+{"category": "technical", "urgency": "high", "needs_human": true}
+
+>>> Classify the support ticket below. Respond with only a JSON object, no other text, in exactly this format:
+... {"category": "...", "urgency": "...", "needs_human": true or false}
+...
+... Rules:
+... - category must be one of: billing, technical, account_access, feature_request, other
+... - urgency must be one of: low, medium, high
+... - needs_human is true if the ticket needs a human agent rather than an automated reply, otherwise false
+...
+... Ticket: "I can't log in, and I think I got charged for the plan I cancelled last month."
+...
+{"category": "account_access", "urgency": "high", "needs_human": true}
