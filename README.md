@@ -6,14 +6,16 @@ Coursework for CSC 595: AI Agent Architecture & Development, Saint Martin's Univ
 
 | Folder | What's in it |
 |---|---|
-| `assignment-1/` | Hosted API call to Anthropic's Claude, plus a local model session with Ollama |
-| `Project/` | Term project documents, starting with the initial project draft |
+| `development-environment-setup/` | Hosted API call to Anthropic's Claude, plus a local model session with Ollama |
+| `week2-hugging-face-hub-scavenger-hunt.md` | Week 2: comparison of Llama 3.2 3B, Qwen2.5 7B, and Mistral Small 24B, including tokenizer counts, context windows, and a Qwen2.5 technical report analysis |
+| `week4/` | Week 4: Claude Opus 5.5 vs. Llama 3.2 3B on six support tickets, with scoring, recommendation, the Llama session log, and screenshots |
+| `Project/` | Term project: a change review and CMDB hygiene assistant. Starts with the initial project draft. |
 
-## Assignment 1
+## Assignment 1: Development Environment Setup
 
 ### Part A: Hosted API call
 
-`assignment-1/api_call.py` reads an Anthropic API key from an environment variable, sends one prompt to Claude, and prints the response. The key is never stored in the code or the repo.
+`development-environment-setup/api_call.py` reads an Anthropic API key from an environment variable, sends one prompt to Claude, and prints the response. The key is never stored in the code or the repo.
 
 **Run it (Windows PowerShell):**
 
@@ -27,10 +29,10 @@ Coursework for CSC 595: AI Agent Architecture & Development, Saint Martin's Univ
    ```
 3. Run the script:
    ```
-   python assignment-1/api_call.py
+   python development-environment-setup/api_call.py
    ```
 
-Successful output is saved in `assignment-1/api_output.png`.
+Successful output is saved in `development-environment-setup/api_output.png`.
 
 ### Part B: Local model
 
@@ -41,7 +43,7 @@ ollama pull llama3.2:3b
 ollama run llama3.2:3b
 ```
 
-The session is saved in `assignment-1/ollama_session.png`. See `assignment-1/ollama_notes.md` for notes.
+The session is saved in `development-environment-setup/ollama_session.png`. See `development-environment-setup/ollama_notes.md` for notes.
 
 ## Security
 
