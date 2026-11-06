@@ -1,0 +1,42 @@
+{
+  "model": "ollama-llama3.2-3b",
+  "examples": 50,
+  "runs": 3,
+  "pass_rate_avg": 0.62,
+  "pass_rate_min": 0.62,
+  "pass_rate_max": 0.62,
+  "avg_latency_s": 3.3838088435374147,
+  "cost_per_1k_requests": 0.0,
+  "per_run": [
+    {
+      "run": 1,
+      "pass_rate": 0.62,
+      "errors": 1,
+      "avg_latency_s": 3.5073265306122448,
+      "avg_input_tokens": 1312.938775510204,
+      "avg_output_tokens": 154.73469387755102,
+      "cost_per_1k_requests": 0.0,
+      "results_file": "C:\\Users\\onemp\\Documents\\GitHub\\ai-engineering-coursework\\csc595-milestone1\\results\\ollama-llama3.2-3b_run1.csv"
+    },
+    {
+      "run": 2,
+      "pass_rate": 0.62,
+      "errors": 0,
+      "avg_latency_s": 3.31784,
+      "avg_input_tokens": 1313.1,
+      "avg_output_tokens": 137.02,
+      "cost_per_1k_requests": 0.0,
+      "results_file": "C:\\Users\\onemp\\Documents\\GitHub\\ai-engineering-coursework\\csc595-milestone1\\results\\ollama-llama3.2-3b_run2.csv"
+    },
+    {
+      "run": 3,
+      "pass_rate": 0.62,
+      "errors": 0,
+      "avg_latency_s": 3.32626,
+      "avg_input_tokens": 1313.1,
+      "avg_output_tokens": 137.02,
+      "cost_per_1k_requests": 0.0,
+      "results_file": "C:\\Users\\onemp\\Documents\\GitHub\\ai-engineering-coursework\\csc595-milestone1\\results\\ollama-llama3.2-3b_run3.csv"
+    }
+  ]
+}

@@ -1,0 +1,149 @@
+{
+  "as_of": "2026-11-02",
+  "note": "Synthetic records for the Milestone 1 eval. Replace with your own proposal's data.",
+  "apps": [
+    {
+      "app_id": "APP-001",
+      "name": "HR Portal",
+      "owner": "People Ops",
+      "tier": "Tier 2",
+      "mfa": "enforced for all users (Okta)",
+      "zero_trust": "in place",
+      "hosting": "Azure (cloud)",
+      "data_classification": "Confidential",
+      "last_verified": "2026-09-30",
+      "open_change": "none"
+    },
+    {
+      "app_id": "APP-002",
+      "name": "Payroll Gateway",
+      "owner": "Finance",
+      "tier": "Tier 1",
+      "mfa": "partial: enforced for admins only (review 2026-07)",
+      "zero_trust": "not started",
+      "hosting": "on-prem",
+      "data_classification": "Restricted",
+      "last_verified": "2026-07-11",
+      "open_change": "CHG-3314"
+    },
+    {
+      "app_id": "APP-003",
+      "name": "Customer Portal",
+      "owner": "Sales Ops",
+      "tier": "Tier 1",
+      "mfa": "enforced for all users",
+      "zero_trust": "in place",
+      "hosting": "AWS (cloud)",
+      "data_classification": "Confidential",
+      "last_verified": "2026-10-15",
+      "open_change": "none"
+    },
+    {
+      "app_id": "APP-004",
+      "name": "Legacy Inventory DB",
+      "owner": "Supply Chain",
+      "tier": "Tier 2",
+      "mfa": "unknown (no MFA configuration on record)",
+      "zero_trust": "unknown",
+      "hosting": "on-prem",
+      "data_classification": "Internal",
+      "last_verified": "2025-11-20",
+      "open_change": "CHG-3320"
+    },
+    {
+      "app_id": "APP-005",
+      "name": "Change Ticket Bridge",
+      "owner": "IT Operations",
+      "tier": "Tier 2",
+      "mfa": "enforced for all users",
+      "zero_trust": "in progress",
+      "hosting": "AWS (cloud)",
+      "data_classification": "Internal",
+      "last_verified": "2026-10-02",
+      "open_change": "none"
+    },
+    {
+      "app_id": "APP-006",
+      "name": "Badge Access Service",
+      "owner": "Facilities",
+      "tier": "Tier 1",
+      "mfa": "not applicable (service account, no interactive login)",
+      "zero_trust": "not started",
+      "hosting": "on-prem",
+      "data_classification": "Restricted",
+      "last_verified": "2026-08-20",
+      "open_change": "none"
+    },
+    {
+      "app_id": "APP-007",
+      "name": "Data Warehouse",
+      "owner": "Analytics",
+      "tier": "Tier 1",
+      "mfa": "enforced for all users",
+      "zero_trust": "in progress",
+      "hosting": "Snowflake (cloud)",
+      "data_classification": "Restricted",
+      "last_verified": "2026-10-20",
+      "open_change": "CHG-3311"
+    },
+    {
+      "app_id": "APP-008",
+      "name": "Dev Wiki",
+      "owner": "Engineering",
+      "tier": "Tier 3",
+      "mfa": "enforced via SSO",
+      "zero_trust": "not started",
+      "hosting": "SaaS",
+      "data_classification": "Confidential",
+      "last_verified": "2026-10-28",
+      "open_change": "none"
+    },
+    {
+      "app_id": "APP-009",
+      "name": "Vendor Invoice Portal",
+      "owner": "Procurement",
+      "tier": "Tier 2",
+      "mfa": "partial: vendor accounts exempt, under review",
+      "zero_trust": "not started",
+      "hosting": "SaaS",
+      "data_classification": "Confidential",
+      "last_verified": "2026-05-30",
+      "open_change": "none"
+    },
+    {
+      "app_id": "APP-010",
+      "name": "Print Management",
+      "owner": "IT Operations",
+      "tier": "Tier 3",
+      "mfa": "not applicable (no user login)",
+      "zero_trust": "unknown",
+      "hosting": "on-prem",
+      "data_classification": "Internal",
+      "last_verified": "2026-06-01",
+      "open_change": "none"
+    }
+  ],
+  "changes": [
+    {
+      "change_id": "CHG-3311",
+      "app": "Data Warehouse",
+      "summary": "Platform version upgrade",
+      "status": "pending human approval",
+      "requested_by": "Analytics"
+    },
+    {
+      "change_id": "CHG-3314",
+      "app": "Payroll Gateway",
+      "summary": "Enforce MFA for all users",
+      "status": "submitted, awaiting human approval",
+      "requested_by": "Finance"
+    },
+    {
+      "change_id": "CHG-3320",
+      "app": "Legacy Inventory DB",
+      "summary": "Decommission",
+      "status": "draft",
+      "requested_by": "Supply Chain"
+    }
+  ]
+}
