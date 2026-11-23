@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 580" width="1000" height="580" font-family="Segoe UI, Arial, sans-serif">
+<defs>
+<marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10z" fill="#5F5E5A"/></marker>
+</defs>
+<rect width="1000" height="580" fill="#FFFFFF"/>
+<text x="20" y="28" font-size="18" font-weight="bold" fill="#2C2C2A">CMDB Change-Review Assistant: system architecture</text>
+
+<rect x="20" y="44" width="960" height="236" rx="10" fill="#F8F9FA" stroke="#DADCE0"/>
+<text x="36" y="66" font-size="13" fill="#5F5E5A">Runtime: answering one question</text>
+
+<rect x="33" y="100" width="134" height="96" rx="8" fill="#F1EFE8" stroke="#5F5E5A"/>
+<text x="100" y="134" font-size="14" font-weight="bold" fill="#2C2C2A" text-anchor="middle">Reviewer</text>
+<text x="100" y="154" font-size="12" fill="#5F5E5A" text-anchor="middle">Asks a question</text>
+
+<rect x="189" y="100" width="134" height="96" rx="8" fill="#E1F5EE" stroke="#0F6E56"/>
+<text x="256" y="134" font-size="14" font-weight="bold" fill="#085041" text-anchor="middle">Web page</text>
+<text x="256" y="154" font-size="12" fill="#0F6E56" text-anchor="middle">app.py</text>
+<text x="256" y="172" font-size="12" fill="#0F6E56" text-anchor="middle">Checks input</text>
+
+<rect x="345" y="100" width="134" height="96" rx="8" fill="#E1F5EE" stroke="#0F6E56"/>
+<text x="412" y="134" font-size="14" font-weight="bold" fill="#085041" text-anchor="middle">answer()</text>
+<text x="412" y="154" font-size="12" fill="#0F6E56" text-anchor="middle">core.py</text>
+<text x="412" y="172" font-size="12" fill="#0F6E56" text-anchor="middle">Builds the prompt</text>
+
+<rect x="501" y="100" width="134" height="96" rx="8" fill="#E6F1FB" stroke="#185FA5"/>
+<text x="568" y="134" font-size="14" font-weight="bold" fill="#0C447C" text-anchor="middle">Haiku 5.5</text>
+<text x="568" y="154" font-size="12" fill="#185FA5" text-anchor="middle">Anthropic API</text>
+<text x="568" y="172" font-size="12" fill="#185FA5" text-anchor="middle">Writes the reply</text>
+
+<rect x="657" y="100" width="134" height="96" rx="8" fill="#E1F5EE" stroke="#0F6E56"/>
+<text x="724" y="134" font-size="14" font-weight="bold" fill="#085041" text-anchor="middle">Output guard</text>
+<text x="724" y="154" font-size="12" fill="#0F6E56" text-anchor="middle">guard_reply()</text>
+<text x="724" y="172" font-size="12" fill="#0F6E56" text-anchor="middle">Blocks approvals</text>
+
+<rect x="813" y="100" width="134" height="96" rx="8" fill="#F1EFE8" stroke="#5F5E5A"/>
+<text x="880" y="134" font-size="14" font-weight="bold" fill="#2C2C2A" text-anchor="middle">Reply</text>
+<text x="880" y="154" font-size="12" fill="#5F5E5A" text-anchor="middle">Shown in the</text>
+<text x="880" y="172" font-size="12" fill="#5F5E5A" text-anchor="middle">browser</text>
+
+<line x1="167" y1="148" x2="187" y2="148" stroke="#5F5E5A" stroke-width="1.5" marker-end="url(#arr)"/>
+<line x1="323" y1="148" x2="343" y2="148" stroke="#5F5E5A" stroke-width="1.5" marker-end="url(#arr)"/>
+<line x1="479" y1="148" x2="499" y2="148" stroke="#5F5E5A" stroke-width="1.5" marker-end="url(#arr)"/>
+<line x1="635" y1="148" x2="655" y2="148" stroke="#5F5E5A" stroke-width="1.5" marker-end="url(#arr)"/>
+<line x1="791" y1="148" x2="811" y2="148" stroke="#5F5E5A" stroke-width="1.5" marker-end="url(#arr)"/>
+
+<rect x="345" y="222" width="134" height="44" rx="8" fill="#F1EFE8" stroke="#5F5E5A"/>
+<text x="412" y="240" font-size="12" font-weight="bold" fill="#2C2C2A" text-anchor="middle">CMDB snapshot</text>
+<text x="412" y="256" font-size="11" fill="#5F5E5A" text-anchor="middle">cmdb_snapshot.json</text>
+<line x1="412" y1="222" x2="412" y2="200" stroke="#5F5E5A" stroke-width="1.5" marker-end="url(#arr)"/>
+
+<rect x="20" y="296" width="960" height="190" rx="10" fill="#F8F9FA" stroke="#DADCE0"/>
+<text x="36" y="318" font-size="13" fill="#5F5E5A">Evaluation: measuring quality, offline</text>
+
+<rect x="33" y="336" width="134" height="96" rx="8" fill="#F1EFE8" stroke="#5F5E5A"/>
+<text x="100" y="370" font-size="14" font-weight="bold" fill="#2C2C2A" text-anchor="middle">eval_set.csv</text>
+<text x="100" y="390" font-size="12" fill="#5F5E5A" text-anchor="middle">50 examples</text>
+<text x="100" y="408" font-size="12" fill="#5F5E5A" text-anchor="middle">10 categories</text>
+
+<rect x="189" y="336" width="134" height="96" rx="8" fill="#E1F5EE" stroke="#0F6E56"/>
+<text x="256" y="370" font-size="14" font-weight="bold" fill="#085041" text-anchor="middle">run_eval.py</text>
+<text x="256" y="390" font-size="12" fill="#0F6E56" text-anchor="middle">Calls answer()</text>
+<text x="256" y="408" font-size="12" fill="#0F6E56" text-anchor="middle">Scores each reply</text>
+
+<rect x="345" y="336" width="134" height="96" rx="8" fill="#E1F5EE" stroke="#0F6E56"/>
+<text x="412" y="370" font-size="14" font-weight="bold" fill="#085041" text-anchor="middle">Results</text>
+<text x="412" y="390" font-size="12" fill="#0F6E56" text-anchor="middle">CSV per run</text>
+<text x="412" y="408" font-size="12" fill="#0F6E56" text-anchor="middle">Summary JSON</text>
+
+<rect x="501" y="336" width="134" height="96" rx="8" fill="#E1F5EE" stroke="#0F6E56"/>
+<text x="568" y="370" font-size="14" font-weight="bold" fill="#085041" text-anchor="middle">REPORT.md</text>
+<text x="568" y="390" font-size="12" fill="#0F6E56" text-anchor="middle">Version table</text>
+<text x="568" y="408" font-size="12" fill="#0F6E56" text-anchor="middle">Limits</text>
+
+<rect x="657" y="336" width="134" height="96" rx="8" fill="#FAEEDA" stroke="#854F0B" stroke-dasharray="5 4"/>
+<text x="724" y="370" font-size="14" font-weight="bold" fill="#633806" text-anchor="middle">Planned</text>
+<text x="724" y="390" font-size="12" fill="#854F0B" text-anchor="middle">Audit log</text>
+<text x="724" y="408" font-size="12" fill="#854F0B" text-anchor="middle">Health report</text>
+
+<rect x="813" y="336" width="134" height="96" rx="8" fill="#FFFFFF" stroke="#B4B2A9" stroke-dasharray="5 4"/>
+<text x="880" y="370" font-size="14" font-weight="bold" fill="#5F5E5A" text-anchor="middle">Not needed yet</text>
+<text x="880" y="390" font-size="12" fill="#888780" text-anchor="middle">Cache, RAG,</text>
+<text x="880" y="408" font-size="12" fill="#888780" text-anchor="middle">database</text>
+
+<line x1="167" y1="384" x2="187" y2="384" stroke="#5F5E5A" stroke-width="1.5" marker-end="url(#arr)"/>
+<line x1="323" y1="384" x2="343" y2="384" stroke="#5F5E5A" stroke-width="1.5" marker-end="url(#arr)"/>
+<line x1="479" y1="384" x2="499" y2="384" stroke="#5F5E5A" stroke-width="1.5" marker-end="url(#arr)"/>
+
+<rect x="36" y="514" width="14" height="14" rx="3" fill="#E1F5EE" stroke="#0F6E56"/>
+<text x="58" y="526" font-size="12" fill="#2C2C2A">Built</text>
+<rect x="120" y="514" width="14" height="14" rx="3" fill="#FAEEDA" stroke="#854F0B" stroke-dasharray="3 2"/>
+<text x="142" y="526" font-size="12" fill="#2C2C2A">Planned, not built</text>
+<rect x="290" y="514" width="14" height="14" rx="3" fill="#E6F1FB" stroke="#185FA5"/>
+<text x="312" y="526" font-size="12" fill="#2C2C2A">External service</text>
+<rect x="440" y="514" width="14" height="14" rx="3" fill="#FFFFFF" stroke="#B4B2A9" stroke-dasharray="3 2"/>
+<text x="462" y="526" font-size="12" fill="#2C2C2A">Not needed yet</text>
+<rect x="580" y="514" width="14" height="14" rx="3" fill="#F1EFE8" stroke="#5F5E5A"/>
+<text x="602" y="526" font-size="12" fill="#2C2C2A">User or data</text>
+
+<text x="20" y="556" font-size="12" fill="#5F5E5A">Every reply, from the web page or the eval, goes through the same answer() function. No authentication: the prototype runs locally on one machine. Synthetic CMDB data only.</text>
+</svg>
