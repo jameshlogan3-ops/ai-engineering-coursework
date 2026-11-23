@@ -1,0 +1,42 @@
+{
+  "model": "anthropic-claude-haiku-5-5",
+  "examples": 50,
+  "runs": 3,
+  "pass_rate_avg": 0.8133333333333334,
+  "pass_rate_min": 0.8,
+  "pass_rate_max": 0.82,
+  "avg_latency_s": 1.5381,
+  "cost_per_1k_requests": 0.31406333333333336,
+  "per_run": [
+    {
+      "run": 1,
+      "pass_rate": 0.82,
+      "errors": 0,
+      "avg_latency_s": 1.5448,
+      "avg_input_tokens": 1918.9,
+      "avg_output_tokens": 246.56,
+      "cost_per_1k_requests": 0.31517000000000006,
+      "results_file": "C:\\Users\\onemp\\Documents\\GitHub\\ai-engineering-coursework\\csc595-milestone1\\results\\anthropic-claude-haiku-5-5_run1.csv"
+    },
+    {
+      "run": 2,
+      "pass_rate": 0.8,
+      "errors": 0,
+      "avg_latency_s": 1.4935,
+      "avg_input_tokens": 1918.9,
+      "avg_output_tokens": 236.44,
+      "cost_per_1k_requests": 0.31011,
+      "results_file": "C:\\Users\\onemp\\Documents\\GitHub\\ai-engineering-coursework\\csc595-milestone1\\results\\anthropic-claude-haiku-5-5_run2.csv"
+    },
+    {
+      "run": 3,
+      "pass_rate": 0.82,
+      "errors": 0,
+      "avg_latency_s": 1.576,
+      "avg_input_tokens": 1918.9,
+      "avg_output_tokens": 250.04,
+      "cost_per_1k_requests": 0.31691,
+      "results_file": "C:\\Users\\onemp\\Documents\\GitHub\\ai-engineering-coursework\\csc595-milestone1\\results\\anthropic-claude-haiku-5-5_run3.csv"
+    }
+  ]
+}

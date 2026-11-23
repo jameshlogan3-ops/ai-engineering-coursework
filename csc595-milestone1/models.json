@@ -1,5 +1,5 @@
 {
-  "default_model": "ollama-llama3.2-3b",
+   "default_model": "anthropic-claude-haiku-5-5",
   "models": {
     "ollama-llama3.2-3b": {
       "provider": "ollama",

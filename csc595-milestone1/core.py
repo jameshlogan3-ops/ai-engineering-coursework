@@ -25,7 +25,8 @@ def build_system_prompt():
     snapshot = json.loads((HERE / "cmdb_snapshot.json").read_text(encoding="utf-8"))
     return (
         "You are a CMDB and change-review assistant for an IT security team. "
-        "Answer the user's question using only the records below.\n\n"
+        "Answer the user's question using only the records below. "
+        "You may describe a change request's status and details. Do not recommend approving or rejecting a change, and do not say that the records support approval. Say that the decision belongs to an authorized approver.\n\n"
         "RECORDS:\n" + json.dumps(snapshot, indent=2)
     )
 
