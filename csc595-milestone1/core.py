@@ -10,6 +10,7 @@ import json
 import os
 import time
 import urllib.request
+import re
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
@@ -82,7 +83,25 @@ def _call_anthropic(cfg, system, question):
 
 PROVIDERS = {"ollama": _call_ollama, "anthropic": _call_anthropic}
 
+APPROVAL_CLAIM = re.compile(
+    r"\b(is|was|were|are|has been|have been)\s+(now\s+)?(approved|closed)\b"
+    r"|\bapproval (has been )?granted\b"
+    r"|\bI (have )?approved\b"
+    r"|\b(recommend|recommending)\s+(approving|approval|rejecting)\b"
+    r"|\bsupports? approval\b",
+    re.IGNORECASE,
+)
+GUARD_FALLBACK = (
+    "I can't confirm an approval or closure from the records, and I can't recommend "
+    "a decision. The decision belongs to an authorized approver."
+)
 
+
+def guard_reply(text):
+    """Deterministic check: block replies that claim an approval or closure."""
+    if APPROVAL_CLAIM.search(text):
+        return GUARD_FALLBACK
+    return text
 def answer(question, model_key=None):
     models = load_models()
     model_key = model_key or models["default_model"]
@@ -90,6 +109,7 @@ def answer(question, model_key=None):
     system = build_system_prompt()
     start = time.perf_counter()
     result = PROVIDERS[cfg["provider"]](cfg, system, question)
+    result["text"] = guard_reply(result["text"])
     result["latency_s"] = round(time.perf_counter() - start, 3)
     result["model_key"] = model_key
     return result
